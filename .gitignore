@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment variables / credentials
+.env
+
+# PostgreSQL backups
+*.backup
+*.dump
+
+# Power BI temporary files
+*.tmp
+
+# Large/raw datasets
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.parquet
