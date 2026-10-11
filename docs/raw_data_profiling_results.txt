@@ -1,0 +1,128 @@
+ total_transactions 
+--------------------
+            6362620
+(1 row)
+
+ step |   type   |  amount  |  nameorig   | oldbalanceorg | newbalanceorig |  namedest   | oldbalancedest | newbalancedest | isfraud | isflaggedfraud 
+------+----------+----------+-------------+---------------+----------------+-------------+----------------+----------------+---------+----------------
+    1 | PAYMENT  |  9839.64 | C1231006815 |     170136.00 |      160296.36 | M1979787155 |           0.00 |           0.00 |       0 |              0
+    1 | PAYMENT  |  1864.28 | C1666544295 |      21249.00 |       19384.72 | M2044282225 |           0.00 |           0.00 |       0 |              0
+    1 | TRANSFER |   181.00 | C1305486145 |        181.00 |           0.00 | C553264065  |           0.00 |           0.00 |       1 |              0
+    1 | CASH_OUT |   181.00 | C840083671  |        181.00 |           0.00 | C38997010   |       21182.00 |           0.00 |       1 |              0
+    1 | PAYMENT  | 11668.14 | C2048537720 |      41554.00 |       29885.86 | M1230701703 |           0.00 |           0.00 |       0 |              0
+    1 | PAYMENT  |  7817.71 | C90045638   |      53860.00 |       46042.29 | M573487274  |           0.00 |           0.00 |       0 |              0
+    1 | PAYMENT  |  7107.77 | C154988899  |     183195.00 |      176087.23 | M408069119  |           0.00 |           0.00 |       0 |              0
+    1 | PAYMENT  |  7861.64 | C1912850431 |     176087.23 |      168225.59 | M633326333  |           0.00 |           0.00 |       0 |              0
+    1 | PAYMENT  |  4024.36 | C1265012928 |       2671.00 |           0.00 | M1176932104 |           0.00 |           0.00 |       0 |              0
+    1 | DEBIT    |  5337.77 | C712410124  |      41720.00 |       36382.23 | C195600860  |       41898.00 |       40348.79 |       0 |              0
+(10 rows)
+
+   type   | transaction_count | percentage 
+----------+-------------------+------------
+ CASH_OUT |           2237500 |      35.17
+ PAYMENT  |           2151495 |      33.81
+ CASH_IN  |           1399284 |      21.99
+ TRANSFER |            532909 |       8.38
+ DEBIT    |             41432 |       0.65
+(5 rows)
+
+ isfraud | transaction_count | percentage 
+---------+-------------------+------------
+       0 |           6354407 |    99.8709
+       1 |              8213 |     0.1291
+(2 rows)
+
+ total_rows | null_step | null_type | null_amount | null_nameorig | null_oldbalanceorg | null_newbalanceorig | null_namedest | null_oldbalancedest | null_newbalancedest | null_isfraud | null_isflaggedfraud 
+------------+-----------+-----------+-------------+---------------+--------------------+---------------------+---------------+---------------------+---------------------+--------------+---------------------
+    6362620 |         0 |         0 |           0 |             0 |                  0 |                   0 |             0 |                   0 |                   0 |            0 |                   0
+(1 row)
+
+ duplicate_rows 
+----------------
+              0
+(1 row)
+
+ unique_steps | unique_transaction_types | unique_origin_accounts | unique_destination_accounts 
+--------------+--------------------------+------------------------+-----------------------------
+          743 |                        5 |                6353307 |                     2722362
+(1 row)
+
+ minimum_step | maximum_step | unique_steps 
+--------------+--------------+--------------
+            1 |          743 |          743
+(1 row)
+
+ minimum_amount | maximum_amount | average_amount | median_amount 
+----------------+----------------+----------------+---------------
+           0.00 |    92445516.64 |      179861.90 |      74871.94
+(1 row)
+
+ negative_amounts | zero_amounts | negative_origin_old_balance | negative_origin_new_balance | negative_destination_old_balance | negative_destination_new_balance 
+------------------+--------------+-----------------------------+-----------------------------+----------------------------------+----------------------------------
+                0 |           16 |                           0 |                           0 |                                0 |                                0
+(1 row)
+
+   type   
+----------
+ CASH_IN
+ CASH_OUT
+ DEBIT
+ PAYMENT
+ TRANSFER
+(5 rows)
+
+ invalid_transaction_types 
+---------------------------
+                         0
+(1 row)
+
+ isfraud 
+---------
+       0
+       1
+(2 rows)
+
+ isflaggedfraud 
+----------------
+              0
+              1
+(2 rows)
+
+ invalid_isfraud | invalid_isflaggedfraud 
+-----------------+------------------------
+               0 |                      0
+(1 row)
+
+   type   | total_transactions | fraudulent_transactions | fraud_rate_percentage 
+----------+--------------------+-------------------------+-----------------------
+ TRANSFER |             532909 |                    4097 |                0.7688
+ CASH_OUT |            2237500 |                    4116 |                0.1840
+ CASH_IN  |            1399284 |                       0 |                0.0000
+ DEBIT    |              41432 |                       0 |                0.0000
+ PAYMENT  |            2151495 |                       0 |                0.0000
+(5 rows)
+
+ isflaggedfraud | total_transactions | actual_fraud_transactions 
+----------------+--------------------+---------------------------
+              0 |            6362604 |                      8197
+              1 |                 16 |                        16
+(2 rows)
+
+ isfraud | isflaggedfraud | transaction_count 
+---------+----------------+-------------------
+       0 |              0 |           6354407
+       1 |              0 |              8197
+       1 |              1 |                16
+(3 rows)
+
+ origin_prefix | transaction_count 
+---------------+-------------------
+ C             |           6362620
+(1 row)
+
+ destination_prefix | transaction_count 
+--------------------+-------------------
+ C                  |           4211125
+ M                  |           2151495
+(2 rows)
+
