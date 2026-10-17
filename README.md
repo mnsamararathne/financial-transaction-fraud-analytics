@@ -104,6 +104,13 @@ SHAP is used to investigate which features contribute to XGBoost predictions. Th
 
 The current sample-based analysis highlights origin balance, transaction amount, and transaction type among the most influential features. SHAP results describe model behaviour; they do not establish causal relationships.
 
+### SHAP Summary Plot
+
+![XGBoost SHAP Summary Plot](docs/images/xgboost_shap_summary.png)
+
+This visualisation summarises how the input features influence the XGBoost model's predictions across the sampled observations. Feature contributions indicate model behaviour, not causation.
+
+
 ## Interactive Dashboard
 
 The Google Looker Studio dashboard presents:
