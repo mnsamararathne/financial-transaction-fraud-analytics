@@ -1,0 +1,33 @@
+Random Forest Validation Threshold Tuning
+=============================================
+Validation rows: 636,882
+Fraud cases: 850
+Fraud prevalence: 0.1335%
+ROC-AUC: 0.9985
+Average precision: 0.8407
+
+Target recall: 95.00%
+Selected threshold: 0.58103864
+
+Threshold 0.5 results:
+{'threshold': 0.5, 'precision': np.float64(0.10470195272353545), 'recall': np.float64(0.9588235294117647), 'tp': 815, 'fp': 6969, 'tn': 629063, 'fn': 35, 'alerts': 7784}
+
+Selected threshold results:
+{'threshold': 0.5810386379699873, 'precision': np.float64(0.16836841008543446), 'recall': np.float64(0.9505882352941176), 'tp': 808, 'fp': 3991, 'tn': 632041, 'fn': 42, 'alerts': 4799}
+
+Classification report at selected threshold:
+              precision    recall  f1-score   support
+
+   Non-fraud     0.9999    0.9937    0.9968    636032
+       Fraud     0.1684    0.9506    0.2861       850
+
+    accuracy                         0.9937    636882
+   macro avg     0.5842    0.9722    0.6414    636882
+weighted avg     0.9988    0.9937    0.9959    636882
+
+Confusion matrix (rows=actual, columns=predicted):
+[[632041   3991]
+ [    42    808]]
+
+The threshold was selected using validation data only. The final test set was not used for threshold selection.
+The training data uses sampled non-fraud cases, so predicted probabilities may not be calibrated to natural prevalence.

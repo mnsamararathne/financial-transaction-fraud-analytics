@@ -1,0 +1,20 @@
+XGBoost SHAP Feature Importance
+======================================
+
+Importance is the mean absolute SHAP value across the explanation sample.
+Values explain contributions to the model's raw output (log-odds), not direct causal effects.
+
+                                       feature  mean_absolute_shap
+                   numeric__origin_old_balance            1.712031
+                               numeric__amount            1.606910
+         categorical__transaction_type_PAYMENT            1.334196
+         categorical__transaction_type_CASH_IN            0.871870
+        categorical__transaction_type_CASH_OUT            0.652873
+              numeric__destination_old_balance            0.624560
+                        numeric__simulated_day            0.403940
+                       numeric__simulated_hour            0.332492
+        categorical__transaction_type_TRANSFER            0.329139
+categorical__destination_account_type_CUSTOMER            0.161046
+categorical__destination_account_type_MERCHANT            0.079470
+           categorical__transaction_type_DEBIT            0.009493
+     categorical__origin_account_type_CUSTOMER            0.000000

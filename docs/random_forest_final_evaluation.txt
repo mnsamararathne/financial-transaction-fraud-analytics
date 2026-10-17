@@ -1,0 +1,45 @@
+FINAL RANDOM FOREST TEST EVALUATION
+=============================================
+Test rows: 1,272,191
+Fraud cases: 1,629
+Fraud prevalence: 0.1280%
+ROC-AUC: 0.9984
+Average precision (AP): 0.8521
+
+THRESHOLD COMPARISON
+---------------------------------------------
+
+Default threshold (0.50)
+Threshold: 0.500000
+Precision: 0.1011
+Recall: 0.9699
+F1-score: 0.1831
+True positives: 1,580
+False positives: 14,054
+False negatives: 49
+True negatives: 1,256,508
+Total alerts: 15,634
+
+Validation-tuned threshold
+Threshold: 0.581039
+Precision: 0.1612
+Recall: 0.9484
+F1-score: 0.2756
+True positives: 1,545
+False positives: 8,039
+False negatives: 84
+True negatives: 1,262,523
+Total alerts: 9,584
+
+CLASSIFICATION REPORT AT TUNED THRESHOLD
+---------------------------------------------
+              precision    recall  f1-score   support
+
+   Non-fraud     0.9999    0.9937    0.9968   1270562
+       Fraud     0.1612    0.9484    0.2756      1629
+
+    accuracy                         0.9936   1272191
+   macro avg     0.5806    0.9711    0.6362   1272191
+weighted avg     0.9989    0.9936    0.9959   1272191
+
+The threshold was selected using validation data, not the final test set.

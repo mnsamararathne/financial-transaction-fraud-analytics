@@ -1,0 +1,10 @@
+FINAL TEST MODEL COMPARISON
+===========================
+
+Thresholds were selected using validation data. Final test data was not used for threshold selection.
+
+              model  threshold  test_roc_auc  test_average_precision  test_precision  test_recall  test_f1  true_positives  false_positives  false_negatives  total_alerts
+Logistic Regression   0.359660      0.968208                0.181072        0.005633     0.955187 0.011201            1556           274657               73        276213
+      Decision Tree   0.817559      0.990017                0.489369        0.125110     0.955801 0.221259            1557            10888               72         12445
+      Random Forest   0.581039      0.998428                0.852069        0.161206     0.948435 0.275573            1545             8039               84          9584
+            XGBoost   0.252849      0.999198                0.891215        0.237330     0.951504 0.379902            1550             4981               79          6531

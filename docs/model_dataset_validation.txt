@@ -1,0 +1,48 @@
+MODELLING DATASET VALIDATION
+===================================
+Dataset: /Users/manesh/Documents/financial-transaction-fraud-analytics/data/processed/fraud_model_dataset.csv
+Total rows: 6,362,620
+Expected rows: 6,362,620
+Row count matches expected: True
+
+Fraud target counts:
+  False: 6,354,407
+  True: 8,213
+Fraud rate: 0.1291%
+
+Missing values by column:
+  amount: 0
+  destination_account_type: 0
+  destination_balance_change: 0
+  destination_balance_error: 0
+  destination_new_balance: 0
+  destination_old_balance: 0
+  is_fraud: 0
+  origin_account_type: 0
+  origin_balance_change: 0
+  origin_balance_error: 0
+  origin_new_balance: 0
+  origin_old_balance: 0
+  simulated_day: 0
+  simulated_hour: 0
+  step: 0
+  transaction_type: 0
+
+Negative amount rows: 0
+Amount range: 0.00 to 92,445,516.64
+Step range: 1 to 743
+Simulated hour range: 0 to 23
+
+Transaction type counts:
+  CASH_IN: 1,399,284
+  CASH_OUT: 2,237,500
+  DEBIT: 41,432
+  PAYMENT: 2,151,495
+  TRANSFER: 532,909
+
+Origin account type counts:
+  CUSTOMER: 6,362,620
+
+Destination account type counts:
+  CUSTOMER: 4,211,125
+  MERCHANT: 2,151,495

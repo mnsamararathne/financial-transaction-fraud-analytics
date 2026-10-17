@@ -1,0 +1,28 @@
+Random Forest — Natural-Prevalence Test Results
+==================================================
+Test rows: 1,271,695
+Actual fraud cases: 1,646
+Actual fraud rate: 0.1294%
+ROC-AUC: 0.9984
+Average precision: 0.8577
+
+Classification report at threshold 0.5:
+              precision    recall  f1-score   support
+
+   Non-fraud     1.0000    0.9858    0.9928   1270049
+       Fraud     0.0814    0.9690    0.1502      1646
+
+    accuracy                         0.9858   1271695
+   macro avg     0.5407    0.9774    0.5715   1271695
+weighted avg     0.9988    0.9858    0.9918   1271695
+
+Confusion matrix (rows=actual, columns=predicted):
+[[1252053   17996]
+ [     51    1595]]
+
+Methodology notes:
+- The test set retains the natural class distribution.
+- Non-fraud training cases were sampled to reduce training cost.
+- Post-transaction balance features and is_flagged_fraud were excluded from predictors.
+- Threshold 0.5 is a baseline, not necessarily the optimal fraud detection threshold.
+- Predicted probabilities may require calibration because the training data was sampled.

@@ -1,0 +1,19 @@
+Random Forest Baseline
+==============================
+ROC-AUC: 0.9987
+Average precision: 0.9806
+
+              precision    recall  f1-score   support
+
+   Non-fraud     0.9987    0.9844    0.9915     32852
+       Fraud     0.7578    0.9750    0.8528      1643
+
+    accuracy                         0.9840     34495
+   macro avg     0.8783    0.9797    0.9222     34495
+weighted avg     0.9873    0.9840    0.9849     34495
+
+Confusion matrix:
+[[32340   512]
+ [   41  1602]]
+
+The test set uses a sampled class distribution. Final evaluation must use a test set at the original fraud prevalence.

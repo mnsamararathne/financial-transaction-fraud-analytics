@@ -1,0 +1,19 @@
+Decision Tree Baseline
+==============================
+ROC-AUC: 0.9963
+Average precision: 0.9482
+
+              precision    recall  f1-score   support
+
+   Non-fraud     0.9984    0.9749    0.9865     32852
+       Fraud     0.6584    0.9690    0.7840      1643
+
+    accuracy                         0.9746     34495
+   macro avg     0.8284    0.9719    0.8853     34495
+weighted avg     0.9822    0.9746    0.9769     34495
+
+Confusion matrix:
+[[32026   826]
+ [   51  1592]]
+
+The test set uses a sampled class distribution. Precision and other prevalence-sensitive metrics must be reassessed on a test set with the original fraud prevalence.
