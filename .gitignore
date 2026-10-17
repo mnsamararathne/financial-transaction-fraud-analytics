@@ -1,23 +1,31 @@
+
 # macOS
 .DS_Store
 
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
 .ipynb_checkpoints/
 
 # Virtual environments
 venv/
 .venv/
+env/
 
-# Environment variables
+# Environment variables and secrets
 .env
+.env.*
 
-# PostgreSQL
+# PostgreSQL backups
 *.backup
 *.dump
 
-# Large datasets
+# Large or generated datasets
 *.csv
 *.xlsx
 *.parquet
+
+# Temporary files
+*.tmp
+*.log
+
