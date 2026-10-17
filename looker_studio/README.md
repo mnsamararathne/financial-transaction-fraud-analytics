@@ -40,7 +40,7 @@ The exported CSV files are excluded from Git version control because they are ge
 
 ## Dashboard Preview
 
-See the dashboard screenshot in [`docs/images/fraud_dashboard.png.png`](../images/fraud_dashboard.png.png) in the main repository.
+See the dashboard screenshot at [`docs/images/fraud_dashboard.png.png`](../docs/images/fraud_dashboard.png.png) in the main repository.
 
 ## Interpretation Notes
 

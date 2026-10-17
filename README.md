@@ -133,19 +133,28 @@ The dashboard uses analytical exports generated from PostgreSQL views.
 ## Repository Structure
 
 ```text
+## Repository Structure
+
+```text
 financial-transaction-fraud-analytics/
 ├── data/
-│   ├── raw/
-│   └── processed/
-├── do
-|-looker_studio/
-├── models/
-├── notebooks/
-├── sql/
-├── src/
+│   ├── raw/                 # Source dataset (not tracked)
+│   └── processed/           # Generated datasets and exports (not tracked)
+├── docs/
+│   ├── images/              # Dashboard and SHAP screenshots
+│   └── model documentation and validation reports
+├── looker_studio/
+│   └── README.md            # Dashboard documentation
+├── models/                  # Saved model artifacts
+├── notebooks/               # Exploratory data analysis
+├── sql/                     # Database, staging, warehouse and analytics SQL
+├── src/                     # Python data and modelling scripts
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+
+Large source and processed CSV files are excluded from version control. The repository contains the project code, SQL scripts, documentation, selected visualisations and saved model artifacts.
 ```
 
 Large source and processed CSV files are excluded from version control. The repository contains the project code, SQL scripts, documentation, and selected model artifacts.
