@@ -119,6 +119,10 @@ The Google Looker Studio dashboard presents:
 
 The dashboard uses analytical exports generated from PostgreSQL views.
 
+### Dashboard Preview
+
+![Financial Transaction Fraud Analytics Dashboard](docs/images/fraud_dashboard.png.png)
+
 ## Repository Structure
 
 ```text
